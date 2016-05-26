@@ -1,0 +1,11 @@
+<h1>Sign In</h1>
+
+<%= form_for(@user, url: signin_path) do |f| %>
+  <div class="field">
+    <%= f.label :user, "Select your name" %> <br>
+    <%= f.collection_select(:id, @users, :id, :name, include_blank: true ) %> <br>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign In" %>
+  </div>
+<% end %>
